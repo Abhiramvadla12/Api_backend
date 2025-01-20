@@ -33,7 +33,7 @@
 
             try {
                 // Fetch the JSON data from the local file
-                const res = await fetch("http://localhost:3000/data");
+                const res = await fetch("https://api-backend-2-4fcp.onrender.com/data");
                 if (!res.ok) {
                     throw new Error(`HTTP error! Status: ${res.status}`);
                 }
