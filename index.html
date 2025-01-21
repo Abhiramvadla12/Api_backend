@@ -33,7 +33,7 @@
 
             try {
                 // Fetch the JSON data from the local file
-                const res = await fetch("https://api-backend-2-4fcp.onrender.com/data");
+                const res = await fetch("http://localhost:3000/data");
                 if (!res.ok) {
                     throw new Error(`HTTP error! Status: ${res.status}`);
                 }
@@ -49,7 +49,8 @@
                     const category = document.createElement("h2");
                     category.textContent = `Category: ${item.Category || "Unknown"}`;
                     card.appendChild(category);
-
+                    const image = document.createElement("img");
+                    image.src = item.image || "No image available.";
                     // Files in the category
                     if (Array.isArray(item.files)) {
                         item.files.forEach((file) => {
@@ -96,7 +97,7 @@
                             }
 
                             // Append media and text to card
-                            card.append(title, description, creator, views, mediaContainer);
+                            card.append(title, description, creator, views, mediaContainer,image);
                         });
                     } else {
                         const noFiles = document.createElement("p");
