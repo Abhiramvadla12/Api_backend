@@ -69,7 +69,7 @@
     "id": "4",
     "Category": "comedy",
     "type": "audio",
-    "image": "..//public/funny-1.jpeg",
+    "image": "/public/funny-1.jpeg",
     "files": [
       {
         "title": "Being 5’6 has its downfalls for sure 🤣 🤣 ",
