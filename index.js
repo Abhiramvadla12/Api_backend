@@ -36,10 +36,9 @@ const mainDataSchema = new mongoose.Schema({
 
 const mainModel = mongoose.model("main_multimedia", mainDataSchema, "main_multimedia");
 
-// Ensure the upload directory exists
-const uploadDir = path.join(__dirname, "contentupload");
+const uploadDir = './uploads';
 if (!fs.existsSync(uploadDir)) {
-  fs.mkdirSync(uploadDir, { recursive: true });
+    fs.mkdirSync(uploadDir);
 }
 
 // Set up multer storage and file size limit
